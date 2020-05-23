@@ -1,120 +1,76 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<title>Sign up facundo farm & resort</title>
-
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="keywords"
-	content="Register Login Widget template Responsive, Login form web template,Flat Pricing tables,Flat Drop downs  Sign up Web Templates, Flat Web Templates, Login Signup Responsive web template, SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
-<script
-	type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
-
+<html>
 <head>
-	<script src="jquery/jquery.min.js"></script>
-	<!---- jquery link local dont forget to place this in first than other script or link or may not work ---->
-
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<!---- boostrap.min link local ----->
-
-	<link rel="stylesheet" href="css/style.css">
-	<!---- boostrap.min link local ----->
-
-	<script src="js/bootstrap.min.js"></script>
-	<!---- Boostrap js link local ----->
-
-	<link rel="icon" href="images/icon.png" type="image/x-icon" />
-	<!---- Icon link local ----->
-
-	<link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
-	<!---- Font awesom link local ----->
-	<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
-	<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
-	<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
-	<link href="style.css" rel="stylesheet">
+<title>Register Login with Authentication</title>
+<!--Custom Theme files-->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Register Login Widget template Responsive, Login form web template,Flat Pricing tables,Flat Drop downs  Sign up Web Templates, Flat Web Templates, Login Signup Responsive web template, SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- Custom Theme files -->
+<link href="../public/css/style.css" rel="stylesheet" type="text/css" media="all" />
+<!--web-fonts-->
+<link href='//fonts.googleapis.com/css?family=Jura:400,300,500,600' rel='stylesheet' type='text/css'>
+<!--//web-fonts-->
 </head>
-
 <body>
-	<div class="container-fluid">
-		<div class="container">
-			<h2 class="text-center" id="title">JustPick</h2>
-			<p class="text-center">
-
-			</p>
-			<hr>
-			<div class="row">
-				<div class="col-md-5">
-					<form role="form" method="post" action="register.php">
-						<fieldset>
-							<p class="text-uppercase pull-center"> SIGN UP.</p>
-
-							<div class="login-form">
-								<form id="login" action="/" method="post"
-									onsubmit="event.preventDefault(); validateMyForm();">
-									<input type="text" name="email" placeholder="E-mail" required="">
-									<input type="text" name="username" placeholder="Username" required="">
-									<input type="password" name="password" placeholder="Password" id="password"
-										required="">
-									<input type="password" name="passwordConf" placeholder="Confirm Password"
-										id="password_conf" required="">
-									<input type="submit" value="REGISTER">
-								</form>
-							</div>
-							<div class="form-check">
-								<label class="form-check-label">
-									<input type="checkbox" class="form-check-input">
-									By Clicking register you're agree to our policy & terms
-								</label>
-							</div>
-							<div>
-								<input type="submit" class="btn btn-lg btn-primary   value=" Register">
-							</div>
-						</fieldset>
+	<h1>Sign in or Sign up for justpick </h1>
+	<!-- main -->
+	<div class="main">
+		<!--login-profile-->
+		
+		<!--login-profile-->
+		<!--signin-form-->
+		<div class="w3">
+			<div class="signin-form profile">
+				<h3>Login</h3>
+				
+				<div class="login-form">
+					<form action="/" method="post">
+						<input type="text" name="logemail" placeholder="E-mail" required="">
+						<input type="password" name="logpassword" placeholder="Password" required="">
+						<div class="tp">
+							<input type="submit" value="LOGIN NOW">
+						</div>
 					</form>
 				</div>
-
-				<div class="col-md-2">
-					<!-------null------>
-				</div>
-
-				<div class="col-md-5">
-					<form role="form">
-						<fieldset>
-							<p class="text-uppercase"> Login using your account: </p>
-
-							<div class="login-form">
-								<form action="/" method="post">
-									<input type="text" name="logemail" placeholder="E-mail" required="">
-									<input type="password" name="logpassword" placeholder="Password" required="">
-									<div class="tp">
-										<input type="submit" value="Login Now">
-									</div>
-								</form>
-							</div>
-				</div>
 			</div>
-			</form>
 		</div>
+		<div class="agile">
+			<div class="signin-form profile">
+				<h3>Sign Up</h3>
+				
+				<div class="login-form">
+					<form id="login" action="/" method="post" onsubmit="event.preventDefault(); validateMyForm();">
+						<input type="text" name="email" placeholder="E-mail" required="">
+						<input type="text" name="username" placeholder="Username" required="">
+						<input type="password" name="password" placeholder="Password" id="password" required="" >
+						<input type="password" name="passwordConf" placeholder="Confirm Password" id="password_conf" required="">
+						<input type="submit" value="REGISTER">
+					</form>
+				</div>
+				<p><a href="#"> By clicking register, I agree to your terms</a></p>
+			</div>
+		</div>
+		<div class="clear"></div>
+		<!--//signin-form-->	
 	</div>
-	</div>
-
-	</div>
-
+	<div class="copyright">
+		<p> &copy; 2016 Register Login Widget . All rights reserved | Design by <a href="http://w3layouts.com/" target="_blank" >W3layouts</a></p>
+	</div>	
 
 	<script type="text/javascript">
 		var passWordField = document.getElementById('password')
 		var passWordConfirmField = document.getElementById('password_conf')
 		var form = document.getElementById('login')
-		function validateMyForm() {
-			if (passWordField.value != passWordConfirmField.value) {
-				alert("Passwords do not match. Please try again.");
-			} else {
-				form.submit()
-			}
+		function validateMyForm(){
+			if(passWordField.value != passWordConfirmField.value){ 
+		    	alert("Passwords do not match. Please try again.");
+		  	} else {
+		  		form.submit()
+		  	}
 		}
-	</script>
+	</script>	
 
 </body>
-
 </html>
