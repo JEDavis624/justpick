@@ -1,0 +1,9 @@
+{
+  "setupFiles": [
+    "raf/polyfill",
+    "<rootDir>/server/tests/setupTests.js"
+  ],
+  "snapshotSerializers": [
+    "enzyme-to-json/serializer"
+  ]
+}

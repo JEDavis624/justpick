@@ -22,7 +22,7 @@ h3.profileName{
 }
 
 /* image upload box on profile page */
-.FileUpload{
+.FileUpload {
     height: 200px;
     width: 200px
 }
@@ -46,7 +46,6 @@ h3.profileName{
 /* logo on topnav */
 #logo{
     padding: 10px;
- 
 }
 
 #updateProfile{

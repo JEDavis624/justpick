@@ -1,25 +1,30 @@
 {
-  "name": "mern",
+  "name": "client",
   "version": "0.1.0",
   "private": true,
   "proxy": "http://localhost:3001/",
   "dependencies": {
-    "react": "^16.6.3",
-    "react-dom": "^16.6.3",
-    "react-scripts": "^2.1.1",
-    "react-router-dom": "^4.3.1",
-    "axios": "^0.18.0"
+    "axios": "^0.18.0",
+    "bootstrap": "^3.3.7",
+    "cloudinary-react": "^1.0.6",
+    "moment": "^2.21.0",
+    "react": "^16.2.0",
+    "react-avatar-edit": "^0.5.9",
+    "react-avatar-editor": "^10.3.0",
+    "react-big-calendar": "^0.18.0",
+    "react-bootstrap": "^0.32.1",
+    "react-dom": "^16.2.0",
+    "react-dropzone": "^4.2.8",
+    "react-router-bootstrap": "^0.24.4",
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "1.1.1",
+    "react-stars": "^2.2.5",
+    "superagent": "^3.8.2"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject"
-  },
-  "browserslist": [
-    ">0.2%",
-    "not dead",
-    "not ie <= 11",
-    "not op_mini all"
-  ]
+  }
 }
