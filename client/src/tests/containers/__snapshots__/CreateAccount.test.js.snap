@@ -1,0 +1,427 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CreateAccount Duplicate email error is displayed 1`] = `
+<div>
+  <MainJumbotron />
+  <Row
+    bsClass="row"
+    componentClass="div"
+  >
+    <Col
+      bsClass="col"
+      componentClass="div"
+      md={4}
+      mdOffset={4}
+      sm={8}
+      smOffset={2}
+      xs={12}
+    >
+      <Uncontrolled(Panel)
+        bsStyle="primary"
+      >
+        <PanelHeading
+          bsClass="panel"
+          componentClass="div"
+        >
+          Create an account
+        </PanelHeading>
+        <PanelBody
+          bsClass="panel"
+          collapsible={false}
+        >
+          <form
+            onSubmit={[Function]}
+          >
+            <FieldGroup
+              label="Email address"
+              name="email"
+              onChange={[Function]}
+              placeholder="Enter an email address"
+              type="email"
+              value=""
+            />
+            <FieldGroup
+              help="Password must be at least 6 characters."
+              label="Password"
+              name="password"
+              onChange={[Function]}
+              placeholder="Enter a password"
+              type="password"
+              value=""
+            />
+            <FieldGroup
+              label="First name"
+              name="firstName"
+              onChange={[Function]}
+              placeholder="Enter your first name"
+              type="text"
+              value=""
+            />
+            <FieldGroup
+              label="Last name"
+              name="lastName"
+              onChange={[Function]}
+              placeholder="Enter your last name"
+              type="text"
+              value=""
+            />
+            <FormGroup
+              bsClass="form-group"
+            >
+              <ControlLabel
+                bsClass="control-label"
+                srOnly={false}
+              >
+                Who are you?
+              </ControlLabel>
+              <Radio
+                bsClass="radio"
+                defaultChecked={true}
+                disabled={false}
+                inline={false}
+                name="isPro"
+                onChange={[Function]}
+                title=""
+                value="false"
+              >
+                I'm a student. I'm here to learn.
+              </Radio>
+              <Radio
+                bsClass="radio"
+                disabled={false}
+                inline={false}
+                name="isPro"
+                onChange={[Function]}
+                title=""
+                value="true"
+              >
+                I'm a pro. I'm here to teach.
+              </Radio>
+            </FormGroup>
+            <Alert
+              bsClass="alert"
+              bsStyle="danger"
+              closeLabel="Close alert"
+            >
+              <p>
+                That email address is already in use
+              </p>
+            </Alert>
+            <Button
+              active={false}
+              block={true}
+              bsClass="btn"
+              bsStyle="primary"
+              disabled={false}
+              type="submit"
+            >
+              Create Account
+            </Button>
+          </form>
+        </PanelBody>
+        <PanelFooter
+          bsClass="panel"
+          style={
+            Object {
+              "textAlign": "center",
+            }
+          }
+        >
+          <LinkContainer
+            activeClassName="active"
+            exact={false}
+            replace={false}
+            strict={false}
+            to="/login"
+          >
+            <a>
+              I already have an account. I'd like to log in.
+            </a>
+          </LinkContainer>
+        </PanelFooter>
+      </Uncontrolled(Panel)>
+    </Col>
+  </Row>
+</div>
+`;
+
+exports[`CreateAccount Initial render 1`] = `
+<div>
+  <MainJumbotron />
+  <Row
+    bsClass="row"
+    componentClass="div"
+  >
+    <Col
+      bsClass="col"
+      componentClass="div"
+      md={4}
+      mdOffset={4}
+      sm={8}
+      smOffset={2}
+      xs={12}
+    >
+      <Uncontrolled(Panel)
+        bsStyle="primary"
+      >
+        <PanelHeading
+          bsClass="panel"
+          componentClass="div"
+        >
+          Create an account
+        </PanelHeading>
+        <PanelBody
+          bsClass="panel"
+          collapsible={false}
+        >
+          <form
+            onSubmit={[Function]}
+          >
+            <FieldGroup
+              label="Email address"
+              name="email"
+              onChange={[Function]}
+              placeholder="Enter an email address"
+              type="email"
+              value=""
+            />
+            <FieldGroup
+              help="Password must be at least 6 characters."
+              label="Password"
+              name="password"
+              onChange={[Function]}
+              placeholder="Enter a password"
+              type="password"
+              value=""
+            />
+            <FieldGroup
+              label="First name"
+              name="firstName"
+              onChange={[Function]}
+              placeholder="Enter your first name"
+              type="text"
+              value=""
+            />
+            <FieldGroup
+              label="Last name"
+              name="lastName"
+              onChange={[Function]}
+              placeholder="Enter your last name"
+              type="text"
+              value=""
+            />
+            <FormGroup
+              bsClass="form-group"
+            >
+              <ControlLabel
+                bsClass="control-label"
+                srOnly={false}
+              >
+                Who are you?
+              </ControlLabel>
+              <Radio
+                bsClass="radio"
+                defaultChecked={true}
+                disabled={false}
+                inline={false}
+                name="isPro"
+                onChange={[Function]}
+                title=""
+                value="false"
+              >
+                I'm a student. I'm here to learn.
+              </Radio>
+              <Radio
+                bsClass="radio"
+                disabled={false}
+                inline={false}
+                name="isPro"
+                onChange={[Function]}
+                title=""
+                value="true"
+              >
+                I'm a pro. I'm here to teach.
+              </Radio>
+            </FormGroup>
+            <Button
+              active={false}
+              block={true}
+              bsClass="btn"
+              bsStyle="primary"
+              disabled={false}
+              type="submit"
+            >
+              Create Account
+            </Button>
+          </form>
+        </PanelBody>
+        <PanelFooter
+          bsClass="panel"
+          style={
+            Object {
+              "textAlign": "center",
+            }
+          }
+        >
+          <LinkContainer
+            activeClassName="active"
+            exact={false}
+            replace={false}
+            strict={false}
+            to="/login"
+          >
+            <a>
+              I already have an account. I'd like to log in.
+            </a>
+          </LinkContainer>
+        </PanelFooter>
+      </Uncontrolled(Panel)>
+    </Col>
+  </Row>
+</div>
+`;
+
+exports[`CreateAccount Other errors displayed 1`] = `
+<div>
+  <MainJumbotron />
+  <Row
+    bsClass="row"
+    componentClass="div"
+  >
+    <Col
+      bsClass="col"
+      componentClass="div"
+      md={4}
+      mdOffset={4}
+      sm={8}
+      smOffset={2}
+      xs={12}
+    >
+      <Uncontrolled(Panel)
+        bsStyle="primary"
+      >
+        <PanelHeading
+          bsClass="panel"
+          componentClass="div"
+        >
+          Create an account
+        </PanelHeading>
+        <PanelBody
+          bsClass="panel"
+          collapsible={false}
+        >
+          <form
+            onSubmit={[Function]}
+          >
+            <FieldGroup
+              label="Email address"
+              name="email"
+              onChange={[Function]}
+              placeholder="Enter an email address"
+              type="email"
+              value=""
+            />
+            <FieldGroup
+              help="Password must be at least 6 characters."
+              label="Password"
+              name="password"
+              onChange={[Function]}
+              placeholder="Enter a password"
+              type="password"
+              value=""
+            />
+            <FieldGroup
+              label="First name"
+              name="firstName"
+              onChange={[Function]}
+              placeholder="Enter your first name"
+              type="text"
+              value=""
+            />
+            <FieldGroup
+              label="Last name"
+              name="lastName"
+              onChange={[Function]}
+              placeholder="Enter your last name"
+              type="text"
+              value=""
+            />
+            <FormGroup
+              bsClass="form-group"
+            >
+              <ControlLabel
+                bsClass="control-label"
+                srOnly={false}
+              >
+                Who are you?
+              </ControlLabel>
+              <Radio
+                bsClass="radio"
+                defaultChecked={true}
+                disabled={false}
+                inline={false}
+                name="isPro"
+                onChange={[Function]}
+                title=""
+                value="false"
+              >
+                I'm a student. I'm here to learn.
+              </Radio>
+              <Radio
+                bsClass="radio"
+                disabled={false}
+                inline={false}
+                name="isPro"
+                onChange={[Function]}
+                title=""
+                value="true"
+              >
+                I'm a pro. I'm here to teach.
+              </Radio>
+            </FormGroup>
+            <Alert
+              bsClass="alert"
+              bsStyle="danger"
+              closeLabel="Close alert"
+            >
+              <p>
+                You did something wrong.  Maybe fix that...
+              </p>
+            </Alert>
+            <Button
+              active={false}
+              block={true}
+              bsClass="btn"
+              bsStyle="primary"
+              disabled={false}
+              type="submit"
+            >
+              Create Account
+            </Button>
+          </form>
+        </PanelBody>
+        <PanelFooter
+          bsClass="panel"
+          style={
+            Object {
+              "textAlign": "center",
+            }
+          }
+        >
+          <LinkContainer
+            activeClassName="active"
+            exact={false}
+            replace={false}
+            strict={false}
+            to="/login"
+          >
+            <a>
+              I already have an account. I'd like to log in.
+            </a>
+          </LinkContainer>
+        </PanelFooter>
+      </Uncontrolled(Panel)>
+    </Col>
+  </Row>
+</div>
+`;

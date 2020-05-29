@@ -1,0 +1,84 @@
+body{
+    font-family: 'Source Sans Pro', sans-serif !important;
+}
+
+h1{
+    text-align: center;
+    color: white !important;
+}
+
+.profilePic{
+    max-height: 200px;
+    align-self: justify;
+}
+
+h3.profileName{
+    margin: 10px !important;
+}
+
+.nameImage{
+    position: absolute;
+    text-align: center !important;
+}
+
+/* image upload box on profile page */
+.FileUpload {
+    height: 200px;
+    width: 200px
+}
+
+.stars{
+   width: 120px;
+   margin: 0 auto 0 auto !important;
+}
+
+#dropZoneImage{
+    height: 200px;
+    width: 200px;
+    margin: 0 auto 0 auto !important;
+}
+
+#previewImage{
+    position: relative;
+    left:50%;
+}
+
+/* logo on topnav */
+#logo{
+    padding: 10px;
+}
+
+#updateProfile{
+    margin: 20px 0px;
+    width: 100%;
+}
+
+#homeJumbotron{
+    background: linear-gradient( #020202, transparent), url("./images/sports.jpg") no-repeat center; 
+    background-size: cover; 
+    min-height: 400px !important;
+    text-align: center;
+    color: white !important;
+}
+
+.aboutUsHeaders{
+    text-align: center;
+}
+
+#avatar{
+    width: 150px;
+    border-radius:50%;
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 10px;
+}
+
+#autobio{
+    width: 60%;
+    margin: 0 auto;
+    margin-bottom: 40px
+}
+
+#profileh1{
+    color: black !important;
+}
