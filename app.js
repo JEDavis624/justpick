@@ -39,10 +39,10 @@ app.use('/api', apiRoutes);
 
 // Send every request to the React app
 // Define any API routes before this runs
-app.get("*", function(req, res) {
+app.get("*", function (req, res) {
   res.sendFile(pathh.join(__dirname, "./client/build/index.html"));
 });
 
 
 
-module.exports = {app};
+module.exports = { app };

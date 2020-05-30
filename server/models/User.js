@@ -45,31 +45,31 @@ UserSchema.statics.findByCredentials = function (email, password) {
 
   return User.findOne({ email }).populate('profile').then((user) => {
     if (!user) {
-      return Promise.reject({err: "user not found"});
+      return Promise.reject({ err: "user not found" });
     }
 
     return new Promise((resolve, reject) => {
       if (password === user.password) {
         resolve(user.parse());
       } else {
-        reject({err: "bad password"});
+        reject({ err: "bad password" });
       }
-    }); 
-  });  
+    });
+  });
 };
 
 UserSchema.methods.parse = function () {
   const user = this;
 
-  const { _id:userId, email, firstName, lastName, isPro, profile=null } = user;
+  const { _id: userId, email, firstName, lastName, isPro, profile = null } = user;
   const parsed = { userId, email, firstName, lastName, isPro, profile }
 
   if (profile) {
-    const { _id:profileId, skillLevel, instruction, zipCode, bio, photo, rate, aveScore, reviewCount } = profile;
+    const { _id: profileId, skillLevel, instruction, zipCode, bio, photo, rate, aveScore, reviewCount } = profile;
     parsed.profile = { profileId, skillLevel, instruction, zipCode, bio, photo, rate, aveScore, reviewCount };
   }
-  
-  return(parsed);
+
+  return (parsed);
 };
 
 UserSchema.methods.setProfileId = function (profileId) {

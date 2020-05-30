@@ -28,7 +28,7 @@ const AppointmentSchema = new mongoose.Schema({
 
 AppointmentSchema.statics.apptOpen = function (student, instructor, time) {
   const Appt = this;
-  console.log( student, instructor, time);
+  console.log(student, instructor, time);
   return Appt.findOne({ instructor: instructor, startTime: time }).then((doc) => {
     console.log(doc);
     if (doc !== null) {
@@ -38,7 +38,7 @@ AppointmentSchema.statics.apptOpen = function (student, instructor, time) {
     return Appt.findOne({ student: student, startTime: time }).then((doc) => {
       if (doc !== null) {
         console.log(doc)
-        return Promise.reject({ "err": "student booked"});
+        return Promise.reject({ "err": "student booked" });
       }
       return Promise.resolve({ "open": true });
     });

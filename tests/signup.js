@@ -3,14 +3,14 @@ import { app } from '../app.js';
 import { User } from '../server/models/User';
 
 
-fixture `Create Account`
-  .page `http://localhost:3000/createaccount`
-  .before( async ctx => {
+fixture`Create Account`
+  .page`http://localhost:3000/createaccount`
+  .before(async ctx => {
     ctx.server = await app.listen(3000);
   })
-  .after( async ctx => {
+  .after(async ctx => {
     await ctx.server.close();
-    await User.findOneAndRemove({email: 'testcafe@mail.com'}).exec((err, doc) => {
+    await User.findOneAndRemove({ email: 'testcafe@mail.com' }).exec((err, doc) => {
       if (err) { return err }
     });
   })
@@ -40,7 +40,7 @@ test('Successful Account Creation', async t => {
   const location = await t.eval(() => window.location);
 
   await t.expect(location.pathname).eql('/pro')
-          .expect(Selector('.profileName').innerText).eql('Jane Smith')
+    .expect(Selector('.profileName').innerText).eql('Jane Smith')
 });
 
 test('Duplicate Account', async t => {

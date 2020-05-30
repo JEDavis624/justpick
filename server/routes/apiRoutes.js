@@ -21,7 +21,7 @@ const ensureAuth = (req, res, next) => {
 router.get('/pros', (req, res) => {
   User.find({ isPro: true }).where('profile').exists().populate('profile').then((pros) => {
     const availPros = pros.filter(pro => {
-      if (pro.profile.daysAvail !== undefined){
+      if (pro.profile.daysAvail !== undefined) {
         return pro;
       }
     })
@@ -49,7 +49,7 @@ router.post('/profile', ensureAuth, (req, res) => {
     Profile.findByIdAndUpdate(profileId, { bio, photo, zipCode, rate, skillLevel, instruction }, { new: true, runValidators: true })
       .then((profile) => {
         const { bio, photo, zipCode, skillLevel, instruction } = profile;
-        req.user.profile = {profileId: req.user.profile.profileId, bio, photo, zipCode, rate, skillLevel, instruction }
+        req.user.profile = { profileId: req.user.profile.profileId, bio, photo, zipCode, rate, skillLevel, instruction }
         res.status(200).send(req.user);
       }).catch((e) => {
         console.log(e);
@@ -60,7 +60,7 @@ router.post('/profile', ensureAuth, (req, res) => {
     const profile = new Profile({ user: req.user.userId, bio, photo, zipCode, rate, skillLevel, instruction });
     profile.save().then((profile) => {
       const { bio, photo, zipCode, skillLevel, insturction, rate, _id: profileId } = profile;
-      
+
       req.user.profile = { profileId, bio, photo, zipCode, skillLevel, rate, instruction };
       return User.findById(req.user.userId)
     }).then((user) => {
@@ -71,7 +71,7 @@ router.post('/profile', ensureAuth, (req, res) => {
       console.log(e);
       res.status(400).send(e);
     });
-  }  
+  }
 });
 
 router.post('/signup', passport.authenticate('local-signup',
@@ -84,13 +84,13 @@ router.post('/signup', passport.authenticate('local-signup',
 
 router.get('/signup/:state', (req, res) => {
   if (req.params.state === 'success') {
-    res.status(200).send({signup: "success", user: req.user});
+    res.status(200).send({ signup: "success", user: req.user });
   } else {
-    res.status(400).send({signup: "failure", "message": req.flash('error')})
+    res.status(400).send({ signup: "failure", "message": req.flash('error') })
   }
 });
 
-router.post('/login', 
+router.post('/login',
   passport.authenticate('local-signin'),
   (req, res) => {
     res.send(req.user);
@@ -124,7 +124,7 @@ router.post('/appt', ensureAuth, (req, res) => {
 
   Appt.apptOpen(student, instructorObj, time).then((open) => {
     if (open) {
-      const appt = new Appt({student: student, instructor: instructorObj, startTime: time});
+      const appt = new Appt({ student: student, instructor: instructorObj, startTime: time });
       appt.save().then((savedAppt) => {
         res.send(savedAppt);
       }).catch((e) => {
@@ -155,9 +155,9 @@ router.get('/pros/:id/appointments/:startDay?/:endDay?', (req, res) => {
 
 router.get('/availability', ensureAuth, (req, res) => {
   if (!req.user.isPro) {
-    res.status(400).send({"err": "Not an instructor"});
+    res.status(400).send({ "err": "Not an instructor" });
   } else {
-    Schedule.findOne({user: req.user.userId}).then((sched) => {
+    Schedule.findOne({ user: req.user.userId }).then((sched) => {
       if (sched) {
         res.send(sched);
       } else {
@@ -177,9 +177,9 @@ router.post('/availability', ensureAuth, (req, res) => {
   console.log(sched);
 
   if (!req.user.isPro) {
-    res.status(400).send({"err": "Not an instructor"});
+    res.status(400).send({ "err": "Not an instructor" });
   } else {
-    Schedule.findOneAndUpdate({user: userId}, {...sched}, {runValidators: true, new: true, upsert: true}).then((update) => {
+    Schedule.findOneAndUpdate({ user: userId }, { ...sched }, { runValidators: true, new: true, upsert: true }).then((update) => {
       console.log("updated");
       const daysAvail = {};
       for (const day in sched) {
@@ -189,11 +189,11 @@ router.post('/availability', ensureAuth, (req, res) => {
           daysAvail[day] = true;
         }
       }
-      return Profile.findOneAndUpdate({user: userId}, {daysAvail}, {runValidators: true, new: true});
+      return Profile.findOneAndUpdate({ user: userId }, { daysAvail }, { runValidators: true, new: true });
     }).then((newProfile) => {
       console.log(newProfile);
       res.send(newProfile);
- 
+
     }).catch((e) => {
       res.status(400).send(e);
     })
@@ -226,27 +226,27 @@ const parseSched = (data) => {
   const parsedAvail = { mon, tue, wed, thu, fri, sat, sun }
 
   Object.keys(parsedAvail).forEach((day) => {
-      
+
     let parsedDay = {}
     hours.forEach((hour) => {
-      if (parsedAvail[day].includes(hour)){
+      if (parsedAvail[day].includes(hour)) {
         parsedDay[hour] = {
           //hour,
           bsStyle: "success",
           disabled: false
         }
       } else {
-          parsedDay[hour] = {
-            // hour,
-            bsStyle: "default",
-            disabled: true
-          }
+        parsedDay[hour] = {
+          // hour,
+          bsStyle: "default",
+          disabled: true
+        }
       }
-      });
+    });
     parsedAvail[day] = parsedDay;
-    })
-  
-    return parsedAvail
+  })
+
+  return parsedAvail
   //return { mon, tue, wed, thu, fri, sat, sun }
 };
 
@@ -255,8 +255,8 @@ router.get('/schedule/:instructorId/:weekday?', ensureAuth, (req, res) => {
   let avail = {};
   let weekday = null;
 
-  if (req.params.weekday) { 
-    weekday = moment(req.params.weekday, "YYYY-MM-DD"); 
+  if (req.params.weekday) {
+    weekday = moment(req.params.weekday, "YYYY-MM-DD");
   } else {
     weekday = moment().startOf('day');
   }
@@ -265,7 +265,7 @@ router.get('/schedule/:instructorId/:weekday?', ensureAuth, (req, res) => {
     avail = doc;
     console.log(avail)
     if (avail === null) {
-      return Promise.reject({"message": "availability not found"});
+      return Promise.reject({ "message": "availability not found" });
     } else {
       return Appt.find().or([{ student: req.user.userId }, { instructor: instructorId }]);
     }
