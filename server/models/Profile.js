@@ -5,13 +5,13 @@ const User = require('./User');
 
 const ProfileSchema = mongoose.Schema({
   bio: {
-    type: String,  
+    type: String,
   },
   zipCode: {
     type: String,
     //required: true,
-    validate: {  
-      validator: (v) => ((validator.isNumeric(v) && validator.isLength(v, {min: 5, max: 5})) || (v === "")) ,
+    validate: {
+      validator: (v) => ((validator.isNumeric(v) && validator.isLength(v, { min: 5, max: 5 })) || (v === "")),
       message: '{VALUE} is not a valid ZIP Code'
     }
   },
