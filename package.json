@@ -1,7 +1,7 @@
 {
-  "name": "partee",
+  "name": "JustPick",
   "version": "1.0.0",
-  "description": "ParTee",
+  "description": "Justpick",
   "main": "server.js",
   "scripts": {
     "server": "node server.js",
