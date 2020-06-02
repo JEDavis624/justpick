@@ -7,6 +7,14 @@ h1{
     color: white !important;
 }
 
+h1, h2 {
+
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+    font-size: 18px 
+}
+
 .profilePic{
     max-height: 200px;
     align-self: justify;
