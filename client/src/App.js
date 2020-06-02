@@ -11,7 +11,7 @@ import ApptScheduler from './containers/ApptScheduler';
 import WeeklyAvailability from './containers/WeeklyAvailability';
 import WeeklySchedule from './containers/WeeklySchedule';
 
-import AboutUs from './containers/AboutUs';
+// import AboutUs from './containers/AboutUs';
 
 
 class App extends Component {
