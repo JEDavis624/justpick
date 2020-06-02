@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Button, Row, Col, Panel, Alert } from 'react-bootstrap';
+import { Button, Panel, Alert } from 'react-bootstrap';
 import FieldGroup from '../components/FieldGroup';
 import { withRouter } from 'react-router-dom';
 import { LinkContainer } from 'react-router-bootstrap';

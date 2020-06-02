@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import SearchForm from '../components/SearchForm';
 import ProSearchResult from '../components/ProSearchResult';
-import { Grid, Row } from 'react-bootstrap';
 import MainJumbotron from '../components/Jumbotron';
 import API from '../utils/API';
 

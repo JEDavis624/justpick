@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Grid, Row, Col, Image, FormGroup, Radio, Checkbox, Button, FormControl, ControlLabel, Alert } from 'react-bootstrap';
+import { FormGroup, Radio, Checkbox, Button, FormControl, ControlLabel, Alert } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 // import FieldGroup from '../components/FieldGroup';
 import BigCalendar from 'react-big-calendar';
@@ -202,7 +202,7 @@ class ProProfile extends Component {
       const events = appts.map(appt => {
           const event = {
               id: appt._id,
-              title: 'Golf lesson',
+              title: 'Sports Lesson',
               start: new Date(appt.startTime),
               end: new Date(appt.startTime + 3600000)
           };
@@ -346,22 +346,22 @@ class ProProfile extends Component {
                         {this.state.isPro ? <h4>Provide Instruction In:</h4> : <h4>Seeking Instruction For:</h4>}
                         <FormGroup>
                             <Checkbox
-                                name="driving"
+                                name="football"
                                 checked={this.state.driving}
                                 onChange={this.onCheckboxChange}
                             >Football</Checkbox>
                             <Checkbox
-                                name="approach"
+                                name="soccer"
                                 checked={this.state.approach}
                                 onChange={this.onCheckboxChange}
                             >Soccer</Checkbox>
                             <Checkbox
-                                name="shortGame"
+                                name="basketball"
                                 checked={this.state.shortGame}
                                 onChange={this.onCheckboxChange}
                             >Basketball</Checkbox>
                             <Checkbox
-                                name="putting"
+                                name="baseball"
                                 checked={this.state.putting}
                                 onChange={this.onCheckboxChange}
                             >Baseball</Checkbox>

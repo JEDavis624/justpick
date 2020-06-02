@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import { LinkContainer } from 'react-router-bootstrap';
 import { Button, FormGroup, ControlLabel, 
-         Radio, Row, Col, Panel, Alert } from 'react-bootstrap';
+         Radio, Panel, Alert } from 'react-bootstrap';
 import FieldGroup from '../components/FieldGroup';
 import MainJumbotron from '../components/Jumbotron';
 import API from '../utils/API';

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Row, Col, Button, FormGroup, ControlLabel, FormControl, Well } from 'react-bootstrap';
+import { Button, FormGroup, ControlLabel, FormControl, Well } from 'react-bootstrap';
 import FieldGroup from './FieldGroup';
 
 const rowStyle = {
