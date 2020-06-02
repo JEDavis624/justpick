@@ -2,10 +2,13 @@ body{
     font-family: 'Source Sans Pro', sans-serif !important;
 }
 
-h1{
-    text-align: center;
-    color: white !important;
+h1, h2 {
+    position: absolute;
+    bottom: 8px;
+    left: 16px;
+    font-size: 18px;
 }
+/
 
 .profilePic{
     max-height: 200px;
