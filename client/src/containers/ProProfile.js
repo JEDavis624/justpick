@@ -59,7 +59,7 @@ class ProProfile extends Component {
         const skills = ["junior", "beginner", "intermediate", "advanced"];
         let skillLevel = [];
 
-        const areas = ["driving", "approach", "shortGame", "putting"];
+        const areas = ["football", "soccer", "baseball/softball", "basketball"];
         let instruction = [];
         for (const skill in skills) {
             if (this.state[skills[skill]]) { skillLevel.push(skills[skill]) }
@@ -82,7 +82,7 @@ class ProProfile extends Component {
         console.log(updates);
         if (skillLevel.length === 0 || instruction.length === 0){
             this.setState({
-                errorMsg: "You must select a Skill Level and Area of Instruction",
+                errorMsg: "You must select a Skill Level and a sport preference",
                 badSubmit: true
             });
         } else {
