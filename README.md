@@ -23,15 +23,11 @@ As an athlete, I want to provide other athletes with the ability to easily organ
 # Process/Technologies used
 Bootstrap
 
-Sequelize
-
-MySQL
-
-Handlebars.js
+MongoDB
 
 Express.js
 
-Breakdown of tasks and roles
+
 
 
 # Setup
@@ -45,13 +41,13 @@ $ npm start
 # Breakdown of tasks
 Rough Breakdown of Tasks 
 
-UI/UX Design (Setting up Handlebars) - researching other CSS frameworks 
+UI/UX Design  - researching other CSS frameworks 
 
 Client-side functionality (event listeners, displaying of dynamic content from DB/API back to client) 
 
 Authentication using Passport.js? 
 
-Relational DB Setup (Creating MYSQL/MongoDB Database and ORM/Sequelize to perform CRUD operations on data) 
+Relational DB Setup 
 
 Search and Algorithm Construction 
 
@@ -62,42 +58,6 @@ QA/Testing - Integration of Lint and potentially setting up unit testing (Shared
 GitHub Maintenance and Ownership of code-based architecture (following MVC Model) 
 
 
-# Project Requirements
-*Use Node and Express server
-
-Backed by a MySQL database and an ORM (not necessarily Sequelize)
-
-Utilize both GET and POST routes for retrieving and adding new data
-
-Must be deployed using Heroku (with data)
-
-1 New third-party API
-
-Polished UI
-
-1 CSS framework (no Bootstrap) 
-
-Must use Handlebars.js
-
-Follow MVC paradigm
-
-Meet good quality coding standards (indentation, scoping, naming)
-
-
-# API's Used
-Yelp
-
-Google Ratings
-
-Angie’s List
-
-Craig’s List 
-
-OKTA (Authentication)
-
-AWS - not really an API but maybe we try to take it from Heroku to AWS if we have time
-
-Google Calendar API (allow users to schedule times through schedule page)
 
 
 # Challenges
@@ -118,8 +78,6 @@ Filter
 API Integration
 
 Google Ratings
-
-AWS 
 
 Google Calendar API (allow users to schedule times through the schedule page)
 
