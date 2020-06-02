@@ -45,21 +45,21 @@ $ npm start
 # Breakdown of tasks
 Rough Breakdown of Tasks 
 
-UI/UX Design (Setting up Handlebars) - researching other CSS frameworks (J)
+UI/UX Design (Setting up Handlebars) - researching other CSS frameworks 
 
-Client-side functionality (event listeners, displaying of dynamic content from DB/API back to client) (Stephanie)
+Client-side functionality (event listeners, displaying of dynamic content from DB/API back to client) 
 
-Authentication using Passport.js? (Ted)
+Authentication using Passport.js? 
 
-Relational DB Setup (Creating MYSQL/MongoDB Database and ORM/Sequelize to perform CRUD operations on data) (Ted)
+Relational DB Setup (Creating MYSQL/MongoDB Database and ORM/Sequelize to perform CRUD operations on data) 
 
-Search and Algorithm Construction (Ted) (Stephanie)
+Search and Algorithm Construction 
 
-Server Setup and maintenance - API Routes and CRUD routes that link back to models and database (Ted)
+Server Setup and maintenance - API Routes and CRUD routes that link back to models and database
 
 QA/Testing - Integration of Lint and potentially setting up unit testing (Shared)
 
-GitHub Maintenance and Ownership of code-based architecture (following MVC Model) (Stephanie)
+GitHub Maintenance and Ownership of code-based architecture (following MVC Model) 
 
 
 # Project Requirements
