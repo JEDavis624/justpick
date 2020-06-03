@@ -55,7 +55,7 @@ class App extends Component {
             <Route path="/login" render={props => <Login setAuth={this.setAuth} />} />
             <Route exact path="/pro" render={props => <ProProfile user={this.state.user} updateUser={this.updateUser}/>} />
             <Route path="/prodetail" render={props => <ProDetail pro={this.state.selectedPro} /> } />
-            <Route exact path="/about" component={AboutUs} />
+            {/* <Route exact path="/about" component={AboutUs} /> */}
             <Route path="/appt" render={props => <ApptScheduler pro={this.state.selectedPro} student={this.state.user} />} />
             <Route path="/avail" component={WeeklyAvailability} />
             <Route path="/schedule" render={props => <WeeklySchedule pro={this.state.selectedPro} />} />
