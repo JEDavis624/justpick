@@ -25,7 +25,7 @@ class Topnav extends Component {
                 </Navbar.Header>
                 <Nav>
                     <LinkContainer to={"/"} exact={true}><NavItem>Home</NavItem></LinkContainer>
-                    <LinkContainer to={"/about"} exact={true}><NavItem>About</NavItem></LinkContainer>
+                    {/* <LinkContainer to={"/about"} exact={true}><NavItem>About</NavItem></LinkContainer> */}
                 </Nav>
                 {this.props.authenticated ? (
                     <Nav pullRight>
